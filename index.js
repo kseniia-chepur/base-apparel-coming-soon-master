@@ -11,12 +11,15 @@ function checkEmailValidity(event) {
   if (!input.value) {
     message.innerHTML = "The email address is missing";
     message.style.color = "red";
+    input.style.borderColor = "red";
   } else if (!EMAIL_REGEXP.test(input.value)) {
-    message.innerHTML = "The email address is not valid";
+    message.innerHTML = "Please provide a valid email";
     message.style.color = "red";
+    input.style.borderColor = "red";
   } else {
     message.innerHTML = "Thank you for signing up!";
     message.style.color = "black";
+    input.style.borderColor = "#ce9797";
   }
 }
 
